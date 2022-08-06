@@ -8,5 +8,5 @@ This is my first website I've ever made with HTML and CSS. I am using this proje
 
 # Future Plans
 
-Adding a Contact form with discord webhooks.
-Improving the overall look of the website
+- Adding a Contact form with discord webhooks.
+- Improving the overall look of the website
