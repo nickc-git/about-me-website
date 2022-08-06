@@ -5,8 +5,8 @@ This is my first website I've ever made with HTML and CSS. I am using this proje
 - My **Journey** as a beginner Programmer
 - All of my current **Projects**
 - My daily **Schedule** 
+- A Contact Form
 
 # Future Plans
 
-- Adding a Contact form with discord webhooks.
 - Improving the overall look of the website
