@@ -1,4 +1,4 @@
-# about-me-website
+# About Me Website
 This is my first website I've ever made with HTML and CSS. I plan on adding functionality with JavaScript in the future.
 
 # Features
