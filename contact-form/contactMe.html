@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 align="center">Nick C Contact Form</h1>
+    <div class="contact-info">
+      <p>Enter a message</p>
+      <input type="text" id="msg" required /><br />
+      <p>Enter your email please.</p>
+      <input type="email" id="email" required /><br />
+      <p>Your contact info, ex. JohnDoe#3257</p>
+      <input type="text" name="info" id="info" />
+      <p class="check-text">Do you need a website?</p>
+      <div class="container">
+        <input type="checkbox" id="myCheck" class="myCheck" />
+      </div>
+      <input type="submit" value="Submit" onclick="sendMessage()" />
+    </div>
+
+    <script>
+      function sendMessage() {
+        var checkBox = document.getElementById("myCheck");
+        if (checkBox.checked == true) {
+          var website = "They want a website";
+        } else {
+          var website = "They don't want a website ";
+        }
+        info = "None sent";
+        let theinfo = document.getElementById("email").value;
+        if (theinfo) {
+          info = theinfo;
+        } else {
+          info = "No email sent";
+        }
+
+        email = "None sent";
+        let theEmail = document.getElementById("email").value;
+        if (theEmail) {
+          email = theEmail;
+        } else {
+          email = "No email sent";
+        }
+
+        let themsg = document.getElementById("msg").value;
+        if (themsg) {
+          text = themsg;
+        } else {
+          text = "No message set";
+        }
+        const request = new XMLHttpRequest();
+        request.open("POST", "");
+
+        request.setRequestHeader("Content-type", "application/json");
+
+        const params = {
+          username: "Client",
+          avatar_url: "",
+          content:
+            "<@285942521832407040> you have a client!, this is the msg: " +
+            text +
+            "  email is: " +
+            email +
+            " There contact info is: " +
+            info +
+            ". " +
+            website,
+          discriminator: "7479",
+        };
+
+        request.send(JSON.stringify(params));
+      }
+    </script>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      div {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        padding-bottom: 100px;
+      }
+
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .myCheck {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+      }
+      .myCheck:hover {
+        background-color: rgb(49, 45, 45);
+      }
+
+      .check-text {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </body>
+</html>
