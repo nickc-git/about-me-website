@@ -209,3 +209,19 @@ ul {
 .a-download:hover, .a-download:active {
     color: black;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+table, tr, th, td, caption {
+    border: 2px solid black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
