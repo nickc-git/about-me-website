@@ -9,6 +9,6 @@ This is my first website I've ever made with HTML and CSS. I am using this proje
 
 # Future Plans
 
-- Adding Javascript
+- Adding more projects to the projects section.
 - Improving the overall look of the website
 - Adding animations
