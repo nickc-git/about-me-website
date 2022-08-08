@@ -35,7 +35,7 @@ function sendMessage() {
     text = "No message set";
   }
   const request = new XMLHttpRequest();
-  request.open("POST", "https://discord.com/api/webhooks/1002531733859741767/jTmV3oWeLuOWZtlUQTgt1Cy5IpVRGKSRibRXBQ5F40HJAcj_FjRhFxdJq63k--_XNwyb");
+  request.open("POST", "");
 
   request.setRequestHeader("Content-type", "application/json");
 
